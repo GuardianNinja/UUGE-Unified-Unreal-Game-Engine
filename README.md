@@ -21,6 +21,7 @@ This project contains a multi-agent workflow application built around a Writer a
 
 1. Create and activate a Python environment.
 2. Install dependencies:
+
    ```bash
    /usr/bin/python3 -m pip install -r requirements.txt
    ```

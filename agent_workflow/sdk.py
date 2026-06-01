@@ -1,8 +1,8 @@
-from typing import Any, Dict
+from typing import Any
 
 try:
     # Replace this import with the real Microsoft Agent Framework SDK package when available.
-    from agent_framework import Agent, Workflow
+    from agent_framework import Agent
 except ImportError:
     class Agent:
         """Fallback Agent base for local execution when the SDK is not installed."""
