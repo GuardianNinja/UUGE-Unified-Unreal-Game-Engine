@@ -1,6 +1,7 @@
 // Engine/World/UWorld.cpp
 #include "UWorld.h"
-#include "Engine/Actor/UActor.h"
+#include "../Actors/UActor.h"
+#include <memory>
 
 void UWorld::AddActor(std::shared_ptr<UActor> actor)
 {
