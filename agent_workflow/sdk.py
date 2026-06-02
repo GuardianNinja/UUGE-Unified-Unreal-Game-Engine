@@ -2,7 +2,7 @@ from typing import Any
 
 try:
     # Replace this import with the real Microsoft Agent Framework SDK package when available.
-    from agent_framework import Agent
+    from agent_framework import Agent # pyright: ignore[reportMissingImports, reportUnknownVariableType, reportUnusedImport]
 except ImportError:
     class Agent:
         """Fallback Agent base for local execution when the SDK is not installed."""
