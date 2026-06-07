@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from .sdk import Agent
+from .sdk import Agent # pyright: ignore[reportUnknownVariableType, reportAttributeAccessIssue]
 
 
-class WriterAgent(Agent):
+class WriterAgent(Agent): # pyright: ignore[reportUntypedBaseClass]
     def __init__(self) -> None:
-        super().__init__(name="Writer")
+        super().__init__(name="Writer") # pyright: ignore[reportUnknownMemberType]
 
     def create_content(self, user_request: str) -> str:
         prompt = user_request.strip()
@@ -28,9 +28,9 @@ class WriterAgent(Agent):
         return "\n".join(revised)
 
 
-class ReviewerAgent(Agent):
+class ReviewerAgent(Agent): # pyright: ignore[reportUntypedBaseClass]
     def __init__(self) -> None:
-        super().__init__(name="Reviewer")
+        super().__init__(name="Reviewer") # pyright: ignore[reportUnknownMemberType]
 
     def provide_feedback(self, draft: str) -> str:
         if not draft.strip():
