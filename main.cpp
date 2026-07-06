@@ -16,6 +16,19 @@ protected:
 
         World = std::make_unique<UWorld>();
         World->AddActor(std::make_shared<URotatingCubeActor>());
+
+        DemoEntity = GetECS().CreateEntity();
+
+        Transform transform;
+        transform.Position = Vec3{0.0f, 1.0f, 0.0f};
+        GetECS().SetTransform(DemoEntity, transform);
+
+        Velocity velocity;
+        velocity.Value = Vec3{1.0f, 0.0f, 0.0f};
+        GetECS().SetVelocity(DemoEntity, velocity);
+
+        GetEditor().SelectEntity(DemoEntity);
+
         return true;
     }
 
@@ -40,6 +53,7 @@ protected:
 
 private:
     std::unique_ptr<UWorld> World;
+    EntityID DemoEntity = 0;
     std::size_t FrameCount = 0;
     float AccumulatedTime = 0.0f;
 };

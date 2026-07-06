@@ -12,6 +12,17 @@ add_executable(uuge_engine
     Engine/World/UWorld.cpp
     Engine/Actors/UActor.cpp
     Engine/Actors/URotatingCubeActor.cpp
+    Engine/Rendering/RenderPipeline.cpp
+    Engine/Rendering/ShaderSystem.cpp
+    Engine/ECS/ECSRegistry.cpp
+    Engine/Physics/PhysicsEngine.cpp
+    Engine/Assets/AssetPipeline.cpp
+    Engine/Editor/EditorTools.cpp
+    Engine/Serialization/Serializer.cpp
+    Engine/Networking/NetworkingLayer.cpp
+    Engine/Scene/SceneGraph.cpp
+    Engine/Input/InputSystem.cpp
+    Engine/Memory/MemoryStrategy.cpp
 )
 
-target_include_directories(uuge_engine PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(uuge_engine PRIVATE )
