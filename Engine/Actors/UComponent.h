@@ -1,4 +1,4 @@
-// Engine/Actor/UComponent.h
+// Engine/Actors/UComponent.h
 #pragma once
 
 class UActor;

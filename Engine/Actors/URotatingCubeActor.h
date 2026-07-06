@@ -1,6 +1,6 @@
 // Game/Actors/URotatingCubeActor.h
 #pragma once
-#include "Engine/Actor/UActor.h"
+#include "Engine/Actors/UActor.h"
 
 class URotatingCubeActor : public UActor
 {

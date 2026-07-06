@@ -1,18 +1,37 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Run Writer-Reviewer Workflow",
-      "type": "shell",
-      "command": "/usr/bin/python3",
-      "args": ["-m", "uvicorn", "app:app", "--reload", "--host", "127.0.0.1", "--port", "8000"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "presentation": {
-        "reveal": "always"
-      }
-    }
-  ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Writer-Reviewer Workflow",
+			"type": "shell",
+			"command": "/usr/bin/python3",
+			"args": [
+				"-m",
+				"uvicorn",
+				"app:app",
+				"--reload",
+				"--host",
+				"127.0.0.1",
+				"--port",
+				"8000"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always"
+			}
+		},
+		{
+			"label": "Get line numbers for key changes",
+			"type": "shell",
+			"command": "/bin/bash",
+			"args": [
+				"-lc",
+				"nl -ba Core/Application/UApplication.cpp | sed -n '1,220p'; echo '---'; nl -ba main.cpp | sed -n '1,220p'; echo '---'; nl -ba Engine/Actors/URotatingCubeActor.h | sed -n '1,120p'; echo '---'; nl -ba README.md | sed -n '1,220p'; echo '---'; nl -ba CMakeLists.txt | sed -n '1,200p'"
+			],
+			"isBackground": false
+		}
+	]
 }

@@ -48,3 +48,15 @@ Example request body:
 
 - The current implementation includes a local SDK fallback in `agent_workflow/sdk.py`.
 - Replace the fallback import with the real Microsoft Agent Framework SDK package once it is available.
+
+## C++ Engine Demo
+
+Build and run the minimal C++ engine demo on macOS/Linux:
+
+```bash
+cmake -S . -B build
+cmake --build build
+./build/uuge_engine
+```
+
+The demo creates a world, spawns a rotating cube actor, and runs a fixed-duration loop (about 5 seconds at ~60 FPS).
