@@ -1,4 +1,4 @@
-🟦 UUGE — Unified Unreal‑Style Game Engine
+🟦 UUGE—Unified Unreal‑Style Game Engine
 A modular, multi‑subsystem C++ game engine inspired by Unreal Engine’s architecture.
 
 UUGE is a modern, component‑driven, editor‑ready game engine built from the ground up with a clean subsystem architecture.
@@ -59,7 +59,7 @@ Draw call statistics
 
 🟦 Shader System
 cpp
-Shaders.RegisterShader("DefaultLit", "void main() { /* mock */ }");
+Shaders.RegisterShader("DefaultLit", "void main() { /*mock*/ }");
 Shaders.CompileShader("DefaultLit");
 🟦 Entity Component System (ECS)
 cpp
